@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+""" Git pre-commit hook to remove private values """
+
+import sys, subprocess
+
+from cmnds import run_cmnds
+
+
+def main():
+
+	cmnds = ['python3 ../py-hook.py "pre" "source.dir" "../backup.dir" ".file.extension" "_secret:.*" "_secret: replace_me"',
+	 'python3 ../py-hook.py "pre" ....']
+
+	run_cmnds(cmnds)
+
+
+if __name__ == "__main__":
+	main()

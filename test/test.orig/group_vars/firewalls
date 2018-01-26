@@ -1,0 +1,42 @@
+csf_global_conf:
+  - name: CLUSTER_PORT
+    config: "7786"
+  - name: CLUSTER_KEY
+    config: "SomeRandomClusterKey"
+  - name: DENY_TEMP_IP_LIMIT
+    config: "200"
+  - name: LF_CONSOLE_EMAIL_ALERT
+    config: "1"
+  - name: LF_GLOBAL
+    config: "3600"
+  - name: GLOBAL_DYNDNS_INTERVAL
+    config: "600"
+  - name: URLGET
+    config: "2"
+
+csf_allow:
+ - 8.8.8.8
+ - 8.8.4.4
+# - 9.9.9.9
+# - 4.2.2.1
+
+csf_ignore:
+- 8.8.8.8
+- 8.8.4.4
+#- 9.9.9.9
+#- 4.2.2.1
+
+csf_blocklists:
+#  - SPAMEDROP
+#  - DSHIELD
+  - TOR
+#  - ALTTOR
+#  - BOGON
+#  - HONEYPOT
+#  - CIARMY
+#  - BFB
+#  - OPENBL
+#  - AUTOSHUN
+#  - MAXMIND
+#  - BDE
+#  - STOPFORUMSPAM

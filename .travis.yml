@@ -1,0 +1,19 @@
+# Travis CI test file to run unit test files
+
+language: python
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.6-dev"  # 3.6 development branch
+  - "3.7-dev"  # 3.7 development branch
+  - "nightly"
+
+# command to run tests
+
+before_script: 
+  - cd test
+
+script:
+  - python3 test.py
