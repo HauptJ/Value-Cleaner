@@ -1,0 +1,25 @@
+csf_conf:
+  - name: CLUSTER_RECVFROM
+    config: ""
+  - name: CLUSTER_SENDTO
+    config: ""
+  - name: TCP_IN
+    config: "22"
+  - name: TCP_OUT
+    config: "25,53,80,443"
+  - name: UDP_IN
+    config: ""
+  - name: UDP_OUT
+    config: "25,53,123"
+  - name: TCP6_IN
+    config: "22,443"
+  - name: TCP6_OUT
+    config: "25,53,80,443"
+  - name: UDP6_IN
+    config: ""
+  - name: UDP6_OUT
+    config: "25,53,123"
+
+ csf_rules:
+#  - rule: nagios
+#  - rule: munin

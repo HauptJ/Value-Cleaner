@@ -1,0 +1,93 @@
+---
+# Variables listed here are applicable to all host groups
+
+##### SE Linux #####
+
+# Security Enhanced Linux Disable or Enable
+sel_disable: false
+
+##### MariaDB #####
+
+# MySQL settings
+mysqlservice: mysqld
+mysql_port: 3306
+
+##### Redis #####
+
+# Redis Cache setting
+# See redis.config
+
+rd_mem: 512mb
+rd_mem_pol: allkeys-lru
+
+##### NGINX #####
+
+# This is used for the nginx server configuration, but access to the
+# WordPress site is not restricted by a named host.
+nginx_ipv6:  2607:5300:201:2100::5:1111
+nginx_port: 443
+server_hostname: test.example.com
+admin_email_secret: test@example.com
+
+# htpasswd settings
+htpasswd_user: test
+htpasswd_pass_secret: testpass
+
+##### Network #####
+
+# server network settings
+ipv4_addr: 142.44.111.111
+ipv6_addr: 2607:5300:201:2100::5:1111/128
+ipv6_gate: 2607:5300:201:2100::1
+ipv6_setup: true
+
+##### CloudFlare #####
+
+# CloudFlare settings
+cf_email: test@example.com
+cf_key_secret: test
+
+cf_bypass_name: dev.example.com
+cf_new_record: true
+cf_zone_id_secret: test
+cf_A_id: test
+cf_AAAA_id: test
+cf_proxied_AAAA_id: test
+
+##### Firewall Options #####
+
+# csf for Config Server Firewall or fail2ban for fail2ban and firewalld
+firewall_serv: csf
+
+### Config Server Firewall ###
+
+
+### Fail2Ban ###
+
+# fail2ban settings
+f2b_whitelist_ip: 8.8.8.8
+f2b_destemail: test@example.com
+f2b_sender: test@example.com
+
+##### WordPress #####
+
+# These are the WordPress database settings
+wp_db_name: testWP
+wp_db_user: testWPuser
+wp_db_password_secret: 1337TestPass
+
+# WordPress Salt
+wp_cache_salt_secret: salty_salty
+
+wp_version: 4.9.1
+wp_sha256sum: a94ae99cda7666bfd482b36f268ad240a3bde2a66724e1312dabf068a9555100
+
+# Disable All Updates
+# By default automatic updates are enabled, set this value to true to disable all automatic updates
+auto_up_disable: false
+
+#Define Core Update Level
+# true  = Development, minor, and major updates are all enabled
+# false = Development, minor, and major updates are all disabled
+# minor = Minor updates are enabled, development, and major updates are disabled
+core_update_level: true
