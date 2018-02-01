@@ -21,3 +21,11 @@ Modify the command listed in pre-commit as follows:
 [Regex Cheat Sheet](http://www.rexegg.com/regex-quickstart.html "Regex Cheat Sheet")
 
 **Note 3:** If the text file does not have an extension, you should use **""** as the paramater.
+
+**Note 4:** The backup directory must not be in the git repository and as a safeguard, the paramater must include __..__ at the beginning. For example: ```"../backup.dir```
+
+### Post-Commit
+
+Modify the command listed in post-commit as follows:
+
+```"post" "source directory" "../backup directory"```
