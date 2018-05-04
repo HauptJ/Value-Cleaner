@@ -11,6 +11,8 @@ init:
 
 install:
   - SET PATH=%PYTHON%;%path%
+  - mklink /H C:\Python34\python3.exe C:\Python34\python.exe
+  - SET PATH=%PATH%;C:\Python34\python3.exe
 
 build_script:
   - 'set python3 C:\Python34\python.exe'
