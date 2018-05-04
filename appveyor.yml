@@ -18,5 +18,5 @@ environment:
 
 build_script:
   - ps: pushd test
-  - ps: python3 test.py
+  - ps: python test.py
   - ps: popd
