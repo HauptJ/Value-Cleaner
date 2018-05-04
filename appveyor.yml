@@ -26,6 +26,7 @@ install:
   - SET PATH=%PYTHON3%;%path%
 
 build_script:
+  - ps: cp C:\%PYTHON%\python.exe C:\%PYTHON%\python3.exe
   - "python --version"
   - "pushd test"
   - "python test.py"
