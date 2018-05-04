@@ -17,6 +17,7 @@ environment:
       PYTHON_ARCH: "64"
 
 build_script:
+  - ps: python --version
   - ps: pushd test
   - ps: python test.py
   - ps: popd
