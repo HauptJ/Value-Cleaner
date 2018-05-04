@@ -21,7 +21,11 @@ environment:
 init:
   - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%"
 
+install:
+  - SET PATH=%PYTHON%;%path%
+
 build_script:
-  - pushd test
-  - python test.py
-  - popd
+  - "python --version"
+  - "pushd test"
+  - "python test.py"
+  - "popd"
