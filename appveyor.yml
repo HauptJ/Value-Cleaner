@@ -20,7 +20,6 @@ init:
   - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%"
 
 build_script:
-  - %PYTHON% --version
   - pushd test
   - %PYTHON% test.py
   - popd
