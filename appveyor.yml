@@ -13,7 +13,7 @@ install:
   - SET PATH=%PYTHON%;%path%
 
 build_script:
-  - ps: set python3 C:\Python34
+  - ps: set python3 "C:\Python34"
   - "python --version"
   - "pushd test"
   - "python test.py"
