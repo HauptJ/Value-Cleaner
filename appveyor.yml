@@ -23,6 +23,7 @@ init:
 
 install:
   - SET PATH=%PYTHON%;%path%
+  - SET PATH=%PYTHON3%;%path%
 
 build_script:
   - "python --version"
