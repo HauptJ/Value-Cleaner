@@ -16,8 +16,11 @@ environment:
       PYTHON_VERSION: "3.4.x" # currently 3.4.3
       PYTHON_ARCH: "64"
 
+init:
+  - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%"
+
 build_script:
-  - ps: python --version
+  - ps: %PYTHON% --version
   - ps: pushd test
-  - ps: python test.py
+  - ps: %PYTHON% test.py
   - ps: popd
