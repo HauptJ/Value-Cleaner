@@ -16,7 +16,7 @@ environment:
       PYTHON_VERSION: "3.4.x" # currently 3.4.3
       PYTHON_ARCH: "64"
 
-test_script:
+build_script:
   - ps: pushd test
   - ps: python3 test.py
   - ps: popd
