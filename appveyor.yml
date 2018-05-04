@@ -11,10 +11,9 @@ init:
 
 install:
   - SET PATH=%PYTHON%;%path%
-  - SET PATH=%PYTHON3%;%python%
 
 build_script:
-  - ps: cp C:\python34\python.exe C:\python34\python3.exe
+  - ps: set python3 C:\Python34
   - "python --version"
   - "pushd test"
   - "python test.py"
