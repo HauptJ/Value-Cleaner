@@ -2,18 +2,6 @@ build: false
 
 environment:
   matrix:
-    - PYTHON: "C:\\Python33"
-      PYTHON_VERSION: "3.3.x" # currently 3.3.5
-      PYTHON_ARCH: "32"
-
-    - PYTHON: "C:\\Python33-x64"
-      PYTHON_VERSION: "3.3.x" # currently 3.3.5
-      PYTHON_ARCH: "64"
-
-    - PYTHON: "C:\\Python34"
-      PYTHON_VERSION: "3.4.x" # currently 3.4.3
-      PYTHON_ARCH: "32"
-
     - PYTHON: "C:\\Python34-x64"
       PYTHON_VERSION: "3.4.x" # currently 3.4.3
       PYTHON_ARCH: "64"
@@ -26,7 +14,7 @@ install:
   - SET PATH=%PYTHON3%;%path%
 
 build_script:
-  - ps: cp C:\%PYTHON%\python.exe C:\%PYTHON%\python3.exe
+  - ps: cp C:\python34\python.exe C:\python34\python3.exe
   - "python --version"
   - "pushd test"
   - "python test.py"
