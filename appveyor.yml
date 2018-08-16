@@ -11,11 +11,12 @@ init:
 
 install:
   - SET PATH=%PYTHON%;%path%
+  - mklink /D python3 C:\Python34\python.exe
+  #- SET PATH=%PATH%;C:\Python34\python3.exe
 
 build_script:
-  - 'set python3 C:\Python34\python.exe'
-  - "python3 --version"
-  - "python --version"
-  - "pushd test"
-  - "python test.py"
-  - "popd"
+  - python3 --version
+  - python --version
+  - pushd test
+  - python test.py
+  - popd
