@@ -2,7 +2,6 @@
 
 ### Build Status
 - **Linux:** [![Build Status](https://travis-ci.org/HauptJ/Value-Cleaner.svg?branch=master)](https://travis-ci.org/HauptJ/Value-Cleaner)
-- **Windows:** [![Build status](https://ci.appveyor.com/api/projects/status/g5orvoxms31ujhee/branch/master?svg=true)](https://ci.appveyor.com/project/HauptJ/value-cleaner/branch/master)
 
 Git pre and post commit hooks to remove values for private variables during commits. Before the files are commited, the pre-commit hook copies the original files to a temporary backup directory outside of the Git repository and then removes the values for specified variables. For example, the value of any variable that ends with **\_secret** will be replaced with **replace\_me** before it is commited. After the commit, the modified files will be restored using the files that were backed up.
 
